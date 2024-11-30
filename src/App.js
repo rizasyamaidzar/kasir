@@ -30,6 +30,30 @@ export default class App extends Component {
       .catch((error) => {
         console.log(error);
       });
+    // tampilkan keranjang
+    axios
+      .get(API_URL + "keranjangs")
+      .then((res) => {
+        const keranjangs = res.data;
+        this.setState({ keranjangs });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  // untuk reload keranjang
+  componentDidUpdate(prevState) {
+    if (this.state.keranjangs !== prevState.keranjangs) {
+      axios
+        .get(API_URL + "keranjangs")
+        .then((res) => {
+          const keranjangs = res.data;
+          this.setState({ keranjangs });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }
   changeCategory = (value) => {
     this.setState({
@@ -89,7 +113,7 @@ export default class App extends Component {
       });
   };
   render() {
-    const { menus, choice } = this.state;
+    const { menus, choice, keranjangs } = this.state;
     return (
       <div className="App">
         <NavbarComponent />
@@ -98,7 +122,7 @@ export default class App extends Component {
             changeCategory={this.changeCategory}
             choice={choice}
           />
-          <div class="grid grid-rows-2 grid-flow-col gap-4 mx-10">
+          <div class="grid grid-rows-2 grid-flow-col gap-2 mx-5">
             {menus &&
               menus.map((menu) => (
                 <Menus
@@ -108,7 +132,7 @@ export default class App extends Component {
                 />
               ))}
           </div>
-          <Hasil />
+          <Hasil keranjangs={keranjangs} />
         </div>
       </div>
     );

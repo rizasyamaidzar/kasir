@@ -185,9 +185,25 @@
   ],
   "keranjangs": [
     {
-      "id": "96f5",
-      "jumlah": 1,
-      "total_harga": 15000,
+      "jumlah": 3,
+      "total_harga": 42000,
+      "product": {
+        "id": "7",
+        "kode": "K-07",
+        "nama": "Mie Ayam Bakso",
+        "harga": 14000,
+        "is_ready": true,
+        "gambar": "mie-ayam-bakso.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      },
+      "id": "7b57"
+    },
+    {
+      "jumlah": 2,
+      "total_harga": 30000,
       "product": {
         "id": "11",
         "kode": "K-011",
@@ -199,11 +215,12 @@
           "id": 2,
           "nama": "Minuman"
         }
-      }
+      },
+      "id": "d8c4"
     },
     {
-      "jumlah": 3,
-      "total_harga": 48000,
+      "jumlah": 6,
+      "total_harga": 96000,
       "product": {
         "id": "1",
         "kode": "K-01",
@@ -216,24 +233,58 @@
           "nama": "Makanan"
         }
       },
-      "id": "1202"
+      "id": "8454"
     },
     {
-      "jumlah": 2,
-      "total_harga": 26000,
+      "id": "2858",
+      "jumlah": 1,
+      "total_harga": 5000,
       "product": {
-        "id": "5",
-        "kode": "K-05",
-        "nama": "Mie Goreng",
-        "harga": 13000,
+        "id": "8",
+        "kode": "K-08",
+        "nama": "Pangsit 6 pcs",
+        "harga": 5000,
         "is_ready": true,
-        "gambar": "mie-goreng.jpg",
+        "gambar": "pangsit.jpg",
+        "category": {
+          "id": 3,
+          "nama": "Cemilan"
+        }
+      }
+    },
+    {
+      "id": "c979",
+      "jumlah": 1,
+      "total_harga": 12000,
+      "product": {
+        "id": "3",
+        "kode": "K-03",
+        "nama": "Nasi Rames",
+        "harga": 12000,
+        "is_ready": true,
+        "gambar": "nasi-rames.jpg",
+        "category": {
+          "id": 1,
+          "nama": "Makanan"
+        }
+      }
+    },
+    {
+      "jumlah": 20,
+      "total_harga": 200000,
+      "product": {
+        "id": "6",
+        "kode": "K-06",
+        "nama": "Bakso",
+        "harga": 10000,
+        "is_ready": true,
+        "gambar": "bakso.jpg",
         "category": {
           "id": 1,
           "nama": "Makanan"
         }
       },
-      "id": "a516"
+      "id": "f12b"
     }
   ],
   "pesanans": [
